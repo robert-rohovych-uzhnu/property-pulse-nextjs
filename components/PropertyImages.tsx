@@ -47,8 +47,8 @@ const PropertyImages: FunctionComponent<PropertyImagesProps> = ({images}) => {
                                     <div key={index} className={images.length % 2 === 1 && index === images.length - 1
                                         ? 'col-span-2' : 'col-span-1'}>
                                         <Item
-                                            original={image}
-                                            thumbnail={image}
+                                            original={image as string}
+                                            thumbnail={image as string}
                                             width={1000}
                                             height={600}
                                         >

@@ -28,7 +28,7 @@ const PropertyMap: FunctionComponent<PropertyMapProps> = ({property}) => {
     });
 
     const [loading, setLoading] = useState(true);
-    const [geocodeError, setGeocodeError] = useState(null);
+    const [geocodeError, setGeocodeError] = useState<Boolean | null>(null);
 
     setDefaults({
         key: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
@@ -72,7 +72,7 @@ const PropertyMap: FunctionComponent<PropertyMapProps> = ({property}) => {
     return !loading && (
         <Map
             mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
-            mapLib={import('mapbox-gl')}
+            mapLib={import('mapbox-gl') as any}
             initialViewState={{
                 longitude: lng ?? undefined,
                 latitude: lat ?? undefined,

@@ -5,7 +5,7 @@ import Property from "@/models/Property";
 import cloudinary from "@/config/cloudinary";
 import {revalidatePath} from "next/cache";
 
-async function deleteProperty(propertyId) {
+async function deleteProperty(propertyId: any) {
     const sessionUser = await getSessionUser();
 
     if (!sessionUser || !sessionUser.userId) {

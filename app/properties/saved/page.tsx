@@ -4,7 +4,6 @@ import User from "@/models/User";
 import PropertyCard from "@/components/PropertyCard";
 
 type SavedPropertiesPageProps = {
-    properties: any
 }
 
 /**

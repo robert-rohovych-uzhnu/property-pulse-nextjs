@@ -1,6 +1,7 @@
 import PropertyEditForm from "@/components/PropertyEditForm";
 import Property from "@/models/Property";
 import {convertToSerializableObject} from "@/utils/convertToObject";
+import {FunctionComponent} from "react";
 
 type PropertyEditPageParams = {
     params: any
@@ -10,7 +11,7 @@ type PropertyEditPageParams = {
  * @name PropertyEditPage
  * @constructor
  */
-const PropertyEditPage = async ({params}) => {
+const PropertyEditPage: FunctionComponent<PropertyEditPageParams> = async ({params}) => {
 
     const propertyDoc = await Property.findById(params.id).lean();
 

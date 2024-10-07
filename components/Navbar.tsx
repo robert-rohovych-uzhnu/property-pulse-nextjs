@@ -156,7 +156,7 @@ const Navbar = () => {
                                     />
                                 </svg>
                             </button>
-                            <UnreadMessageCount count={123} />
+                            <UnreadMessageCount />
                         </Link>
                         {/* Profile dropdown button */}
                         <div className="relative ml-3">

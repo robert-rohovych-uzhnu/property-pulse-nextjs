@@ -5,38 +5,7 @@ import {FunctionComponent} from "react";
 import {getRateDisplay} from "@/utils/getRateDisplay";
 
 type PropertyCardProps = {
-    property: {
-        _id: string;
-        owner: string;
-        name: string;
-        type: string;
-        description: string;
-        location: {
-            street: string;
-            city: string;
-            state: string;
-            zipcode: string;
-        };
-        square_feet: number;
-        images: string[];
-        price: number;
-        beds: number;
-        amenities: string[];
-        baths: number;
-        size: number;
-        rates: {
-            weekly?: number;
-            monthly?: number;
-            nightly?: number;
-        };
-        is_featured: boolean;
-        "seller_info": {
-            "name": string;
-            "email": string;
-            "phone": string;
-        },
-        updatedAt: string;
-    }
+    property: any
 };
 
 const PropertyCard: FunctionComponent<PropertyCardProps> = ({property}) => {

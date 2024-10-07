@@ -4,7 +4,7 @@ import {createContext, useContext, useEffect, useState} from "react";
 import {useSession} from "next-auth/react";
 import {getUnreadMessageCount} from "@/app/actions/getUnreadMessageCount";
 
-const GlobalContext: any = createContext();
+const GlobalContext: any = createContext({});
 
 export function GlobalProvider({children}: any) {
     const [unreadCount, setUnreadCount] = useState(0);

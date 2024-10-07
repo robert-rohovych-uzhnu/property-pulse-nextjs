@@ -1,4 +1,4 @@
-export const getRateDisplay = (property) => {
+export const getRateDisplay = (property: any) => {
     const {rates} = property;
     if (rates.monthly !== undefined) {
         return `$${rates.monthly.toLocaleString()}/mo`;

@@ -19,7 +19,7 @@ const MessageCard: FunctionComponent<MessageCardProps> = ({ message }) => {
     const [isRead, setIsRead] = useState(message.read);
     const [isDeleted, setIsDeleted] = useState(false);
 
-    const {updateUnreadMessageCount} = useGlobalContext();
+    const {updateUnreadMessageCount}: any = useGlobalContext();
 
     const handleReadClick = async () => {
         const read = await markMessageAsRead(message._id);
